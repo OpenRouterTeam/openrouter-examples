@@ -4,6 +4,8 @@ require("dotenv").config();
 
 // TODO: make a key at localhost:3000/keys and put it in .env
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+const OPENROUTER_BASE_URL =
+  process.env.OPENROUTER_BASE_URL || "https://openrouter.ai";
 
 const chat = new ChatOpenAI(
   {
@@ -18,7 +20,7 @@ const chat = new ChatOpenAI(
     openAIApiKey: OPENROUTER_API_KEY,
   },
   {
-    basePath: "http://localhost:3000/api/v1",
+    basePath: `${OPENROUTER_BASE_URL}/api/v1`,
     baseOptions: {
       headers: {
         "HTTP-Referer": "https://localhost:3000/",
