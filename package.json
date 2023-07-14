@@ -11,7 +11,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "langchain": "^0.0.107"
+    "dotenv": "^16.3.1",
+    "langchain": "^0.0.107",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@types/node": "^20.4.2"

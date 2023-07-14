@@ -1,10 +1,6 @@
 import { ChatOpenAI } from "langchain/chat_models/openai";
-import {
-  HumanMessage,
-  SystemMessage,
-  AIMessage,
-  BaseMessage,
-} from "langchain/schema";
+import { HumanMessage, SystemMessage, AIMessage } from "langchain/schema";
+require("dotenv").config();
 
 // TODO: make a key at localhost:3000/keys and put it in .env
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
