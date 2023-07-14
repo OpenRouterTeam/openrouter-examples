@@ -1,0 +1,19 @@
+{
+  "name": "langchain-openrouter",
+  "version": "1.0.0",
+  "description": "Demo script using LangChain.js and OpenRouter",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "langchain": "^0.0.107"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.2"
+  }
+}
