@@ -11,6 +11,9 @@ dependencies:
   langchain:
     specifier: ^0.0.107
     version: 0.0.107
+  openai:
+    specifier: ^4.0.0
+    version: 4.0.0
   ts-node:
     specifier: ^10.9.1
     version: 10.9.1(@types/node@20.4.2)(typescript@5.1.6)
@@ -683,6 +686,23 @@ packages:
       form-data: 4.0.0
     transitivePeerDependencies:
       - debug
+    dev: false
+
+  /openai@4.0.0:
+    resolution: {integrity: sha512-UHv70gIw20pxu9tiUueE9iS+4U4eTGiTgQr+zlJ5aX4oj6LUUp+7mBn0xAqilawftwUB/biohPth2vcZFmoNYw==}
+    hasBin: true
+    dependencies:
+      '@types/node': 18.16.19
+      '@types/node-fetch': 2.6.4
+      abort-controller: 3.0.0
+      agentkeepalive: 4.3.0
+      digest-fetch: 1.3.0
+      form-data-encoder: 1.7.2
+      formdata-node: 4.4.1
+      node-fetch: 2.6.12
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
     dev: false
 
   /openapi-types@12.1.3:

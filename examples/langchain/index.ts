@@ -1,11 +1,11 @@
-import { ChatOpenAI } from "langchain/chat_models/openai";
-import { HumanMessage, SystemMessage, AIMessage } from "langchain/schema";
-require("dotenv").config();
+import { ChatOpenAI } from "langchain/chat_models/openai"
+import { HumanMessage, SystemMessage, AIMessage } from "langchain/schema"
+require("dotenv").config()
 
-// TODO: make a key at localhost:3000/keys and put it in .env
-const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+// TODO: make a key at openrouter.ai/keys and put it in .env
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY
 const OPENROUTER_BASE_URL =
-  process.env.OPENROUTER_BASE_URL || "https://openrouter.ai";
+  process.env.OPENROUTER_BASE_URL || "https://openrouter.ai"
 
 const chat = new ChatOpenAI(
   {
@@ -28,7 +28,7 @@ const chat = new ChatOpenAI(
       },
     },
   }
-);
+)
 
 async function main() {
   const response = await chat.call([
@@ -39,9 +39,9 @@ async function main() {
     new HumanMessage(
       "Translate: I am bouncy goofball who loves cookies and wants to go to Disneyland and ride the teacups. But one day I will be a real boy."
     ),
-  ]);
+  ])
 
-  console.log(response);
+  console.log(response)
 }
 
 // Helpers
@@ -68,11 +68,11 @@ function* lotsOfMessages(numMessages: number) {
     new AIMessage("Je suis une vache."),
     new HumanMessage("Translate: I am a pig."),
     new AIMessage("Je suis un cochon."),
-  ];
+  ]
   for (let i = 0; i < numMessages; i++) {
-    yield batch[i % batch.length];
+    yield batch[i % batch.length]
   }
 }
 
 // Run
-main().catch((e) => console.error(e));
+main().catch((e) => console.error(e))

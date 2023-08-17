@@ -1,6 +1,18 @@
-# LangChain.js / OpenRouter demo
+# OpenRouter Examples
 
-Use this example repo to run [LangChain.js](https://github.com/hwchase17/langchainjs) scripts using [OpenRouter](https://openrouter.ai).
+Use the `examples` folder in this repo to integrate different SDKs with OpenRouter.
+
+OpenRouter is an API that can be used with most AI SDKs, and has a very similar format to OpenAI's own API.
+
+Below, you can find different SDKs adapted to use OpenRouter.
+
+### npm openai
+
+Use [this example repo](/examples/openai/) to run the npm [openai](https://www.npmjs.com/package/openai) package using [OpenRouter](https://openrouter.ai).
+
+### LangChain.js
+
+Use [this example repo](/examples/langchain/) to run [LangChain.js](https://github.com/hwchase17/langchainjs) scripts using [OpenRouter](https://openrouter.ai).
 
 ## Changing models
 
