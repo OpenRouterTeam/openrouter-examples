@@ -8,11 +8,11 @@ Below, you can find different SDKs adapted to use OpenRouter.
 
 ### npm openai
 
-Use [this example repo](/examples/openai/) to run the npm [openai](https://www.npmjs.com/package/openai) package using [OpenRouter](https://openrouter.ai).
+Use [this example](/examples/openai/) to run the npm [openai](https://www.npmjs.com/package/openai) package using [OpenRouter](https://openrouter.ai).
 
 ### LangChain.js
 
-Use [this example repo](/examples/langchain/) to run [LangChain.js](https://github.com/hwchase17/langchainjs) scripts using [OpenRouter](https://openrouter.ai).
+Use [this example](/examples/langchain/) to run [LangChain.js](https://github.com/hwchase17/langchainjs) scripts using [OpenRouter](https://openrouter.ai).
 
 ## Changing models
 
