@@ -9,9 +9,9 @@ const OPENROUTER_BASE_URL =
 
 const chat = new ChatOpenAI(
   {
-    // modelName: "openai/gpt-3.5-turbo",
+    modelName: "openai/gpt-3.5-turbo",
     // modelName: "tiiuae/falcon-40b-instruct",
-    modelName: "anthropic/claude-instant-v1",
+    // modelName: "anthropic/claude-instant-v1",
     // modelName: "anthropic/claude-2",
     // modelName: "google/palm-2-chat-bison",
     temperature: 0.8,
@@ -31,17 +31,17 @@ const chat = new ChatOpenAI(
 );
 
 async function main() {
-  const responseB = await chat.call([
+  const response = await chat.call([
     new SystemMessage(
       "You are a helpful assistant that translates English to some other language, depending on the context."
     ),
-    ...lotsOfMessages(40),
+    ...lotsOfMessages(2),
     new HumanMessage(
       "Translate: I am bouncy goofball who loves cookies and wants to go to Disneyland and ride the teacups. But one day I will be a real boy."
     ),
   ]);
 
-  console.log(responseB);
+  console.log(response);
 }
 
 // Helpers
