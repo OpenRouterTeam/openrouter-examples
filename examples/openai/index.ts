@@ -2,7 +2,6 @@ import OpenAI from "openai"
 
 require("dotenv").config()
 
-// TODO: make a key at openrouter.ai/keys and put it in .env
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY
 const OPENROUTER_BASE_URL =
   process.env.OPENROUTER_BASE_URL || "https://openrouter.ai/api/v1"
@@ -13,6 +12,7 @@ const openai = new OpenAI({
   defaultHeaders: {
     "HTTP-Referer": "https://github.com/OpenRouterTeam/openrouter-examples",
   },
+  // dangerouslyAllowBrowser: true, // Enable this if you used OAuth to fetch a user-scoped `apiKey` above. See https://openrouter.ai/docs#oauth to learn how.
 })
 
 async function main() {
