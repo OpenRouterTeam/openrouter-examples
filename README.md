@@ -14,6 +14,14 @@ Use [this example](/examples/openai/) to run the npm [openai](https://www.npmjs.
 
 Use [this example](/examples/langchain/) to run [LangChain.js](https://github.com/hwchase17/langchainjs) scripts using [OpenRouter](https://openrouter.ai).
 
+### OpenRouter AI SDK Provider
+
+Use [this example](/examples/openrouter-provider/) to run the [@openrouter/ai-sdk-provider](https://www.npmjs.com/package/@openrouter/ai-sdk-provider) package using [OpenRouter](https://openrouter.ai).
+
+### Vercel AI SDK
+
+Use [this example](/examples/vercel-ai/) to run the [ai](https://www.npmjs.com/package/ai) package from Vercel using [OpenRouter](https://openrouter.ai).
+
 ## Changing models
 
 Change the model you want to use by configuring `modelName` in `index.ts`. You can use models from OpenAI, Anthropic, Google, and more. See the [OpenRouter docs](https://openrouter.ai/docs) for all the options.

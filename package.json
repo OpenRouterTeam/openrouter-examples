@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node examples/openai/index.ts",
+    "start:langchain": "ts-node examples/langchain/index.ts",
+    "start:openrouter": "ts-node examples/openrouter-provider/index.ts",
+    "start:vercel": "ts-node examples/vercel-ai/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,11 +15,13 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.3.1",
-    "langchain": "^0.0.144",
-    "openai": "^4.17.5",
-    "ts-node": "^10.9.1"
+    "langchain": "^0.1.12",
+    "openai": "^4.24.1",
+    "ts-node": "^10.9.2",
+    "@openrouter/ai-sdk-provider": "^0.2.0",
+    "ai": "^4.1.21"
   },
   "devDependencies": {
-    "@types/node": "^20.9.0"
+    "@types/node": "^20.11.16"
   }
 }
