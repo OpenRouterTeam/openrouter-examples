@@ -14,6 +14,7 @@ const chat = new ChatOpenAI(
     // modelName: "anthropic/claude-instant-v1",
     // modelName: "anthropic/claude-2",
     // modelName: "google/palm-2-chat-bison",
+    // modelName: "google/gemini-2.5-pro-exp-03-25:free",
     temperature: 0.8,
     maxTokens: 300,
     streaming: true,
