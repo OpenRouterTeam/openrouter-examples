@@ -18,14 +18,12 @@ const chat = new ChatOpenAI(
     maxTokens: 300,
     streaming: true,
     openAIApiKey: OPENROUTER_API_KEY,
-  },
-  {
-    basePath: `${OPENROUTER_BASE_URL}/api/v1`,
-    baseOptions: {
-      headers: {
+    configuration: {
+      baseURL: "https://openrouter.ai/api/v1",
+      defaultHeaders: {
         "HTTP-Referer": "https://localhost:3000/",
         "X-Title": "Langchain.js Testing",
-      },
+      }
     },
   }
 )
