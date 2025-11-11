@@ -196,3 +196,8 @@ See ecosystem-specific examples:
   - [user-message-cache.ts](../typescript/ai-sdk-v5/src/prompt-caching/user-message-cache.ts)
   - [multi-message-cache.ts](../typescript/ai-sdk-v5/src/prompt-caching/multi-message-cache.ts)
   - [no-cache-control.ts](../typescript/ai-sdk-v5/src/prompt-caching/no-cache-control.ts) (control)
+
+- **Effect AI** (@effect/ai): [typescript/effect-ai/src/prompt-caching/](../typescript/effect-ai/src/prompt-caching/)
+  - [user-message-cache.ts](../typescript/effect-ai/src/prompt-caching/user-message-cache.ts)
+  - [multi-message-cache.ts](../typescript/effect-ai/src/prompt-caching/multi-message-cache.ts)
+  - [no-cache-control.ts](../typescript/effect-ai/src/prompt-caching/no-cache-control.ts) (control)

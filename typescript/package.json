@@ -12,7 +12,8 @@
   "workspaces": [
     "shared",
     "fetch",
-    "ai-sdk-v5"
+    "ai-sdk-v5",
+    "effect-ai"
   ],
   "devDependencies": {
     "@types/bun": "latest",
