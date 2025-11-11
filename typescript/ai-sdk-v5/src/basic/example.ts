@@ -1,6 +1,6 @@
 /**
  * Idiomatic Vercel AI SDK example with OpenRouter provider
- * 
+ *
  * This example demonstrates key AI SDK concepts:
  * - Creating and configuring the OpenRouter provider
  * - Using generateText for non-streaming chat completions
@@ -146,7 +146,12 @@ async function usageAccounting() {
 
   // OpenRouter-specific metadata with cost information
   if (result.providerMetadata?.openrouter?.usage) {
-    const usage = result.providerMetadata.openrouter.usage as any;
+    const usage = result.providerMetadata.openrouter.usage as {
+      totalTokens?: number;
+      promptTokens?: number;
+      completionTokens?: number;
+      cost?: number;
+    };
     console.log('\nOpenRouter Usage Details:');
     console.log('- Total Tokens:', usage.totalTokens);
     console.log('- Prompt Tokens:', usage.promptTokens);
@@ -167,7 +172,8 @@ async function conversationExample() {
   // System messages set the behavior and context for the model
   const { text } = await generateText({
     model,
-    system: 'You are a helpful coding assistant specializing in TypeScript and modern web development.',
+    system:
+      'You are a helpful coding assistant specializing in TypeScript and modern web development.',
     messages: [
       {
         role: 'user',
@@ -175,7 +181,8 @@ async function conversationExample() {
       },
       {
         role: 'assistant',
-        content: 'You define a generic function using angle brackets with a type parameter, like this: `function identity<T>(arg: T): T { return arg; }`',
+        content:
+          'You define a generic function using angle brackets with a type parameter, like this: `function identity<T>(arg: T): T { return arg; }`',
       },
       {
         role: 'user',
