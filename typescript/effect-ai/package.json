@@ -1,0 +1,21 @@
+{
+  "name": "@openrouter-examples/effect-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "examples": "bun run src/prompt-caching/user-message-cache.ts && bun run src/prompt-caching/multi-message-cache.ts && bun run src/prompt-caching/no-cache-control.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@openrouter-examples/shared": "workspace:*",
+    "@effect/ai": "^0.32.1",
+    "@effect/ai-openrouter": "^0.6.0",
+    "@effect/platform": "^0.93.0",
+    "@effect/platform-bun": "^0.83.0",
+    "effect": "^3.19.3"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
