@@ -32,12 +32,20 @@ const program = Effect.gen(function* () {
   const testId = Date.now();
   const largeContext = `Test ${testId}: Here is a comprehensive codebase to analyze:\n\n${LARGE_SYSTEM_PROMPT}`;
 
-  yield* Console.log('╔════════════════════════════════════════════════════════════════════════════╗');
-  yield* Console.log('║   Anthropic Prompt Caching - User Message (Effect AI)                     ║');
-  yield* Console.log('╚════════════════════════════════════════════════════════════════════════════╝');
+  yield* Console.log(
+    '╔════════════════════════════════════════════════════════════════════════════╗',
+  );
+  yield* Console.log(
+    '║   Anthropic Prompt Caching - User Message (Effect AI)                     ║',
+  );
+  yield* Console.log(
+    '╚════════════════════════════════════════════════════════════════════════════╝',
+  );
   yield* Console.log('');
   yield* Console.log('Testing cache_control on user message content block');
-  yield* Console.log(`Context size: ${largeContext.length} characters (~${Math.round(largeContext.length / 4)} tokens)`);
+  yield* Console.log(
+    `Context size: ${largeContext.length} characters (~${Math.round(largeContext.length / 4)} tokens)`,
+  );
   yield* Console.log('');
 
   const makePrompt = () =>

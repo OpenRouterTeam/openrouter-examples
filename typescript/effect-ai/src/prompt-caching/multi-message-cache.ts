@@ -22,9 +22,15 @@ const program = Effect.gen(function* () {
   const testId = Date.now();
   const largeContext = `Test ${testId}: Context:\n\n${LARGE_SYSTEM_PROMPT}`;
 
-  yield* Console.log('╔════════════════════════════════════════════════════════════════════════════╗');
-  yield* Console.log('║   Anthropic Prompt Caching - Multi-Message (Effect AI)                    ║');
-  yield* Console.log('╚════════════════════════════════════════════════════════════════════════════╝');
+  yield* Console.log(
+    '╔════════════════════════════════════════════════════════════════════════════╗',
+  );
+  yield* Console.log(
+    '║   Anthropic Prompt Caching - Multi-Message (Effect AI)                    ║',
+  );
+  yield* Console.log(
+    '╚════════════════════════════════════════════════════════════════════════════╝',
+  );
   yield* Console.log('');
   yield* Console.log('Testing cache_control in multi-turn conversation');
   yield* Console.log('');
