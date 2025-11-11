@@ -82,7 +82,9 @@ async function main() {
     console.log('  Response:', result1.text.substring(0, 100) + '...');
     const usage1 = result1.providerMetadata?.openrouter?.usage;
     const cached1 = usage1?.promptTokensDetails?.cachedTokens ?? 0;
-    console.log(`  Tokens: prompt=${usage1?.promptTokens}, completion=${usage1?.completionTokens}, cached=${cached1}`);
+    console.log(
+      `  Tokens: prompt=${usage1?.promptTokens}, completion=${usage1?.completionTokens}, cached=${cached1}`,
+    );
 
     // Wait 1 second
     await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -116,7 +118,9 @@ async function main() {
     console.log('  Response:', result2.text.substring(0, 100) + '...');
     const usage2 = result2.providerMetadata?.openrouter?.usage;
     const cached2 = usage2?.promptTokensDetails?.cachedTokens ?? 0;
-    console.log(`  Tokens: prompt=${usage2?.promptTokens}, completion=${usage2?.completionTokens}, cached=${cached2}`);
+    console.log(
+      `  Tokens: prompt=${usage2?.promptTokens}, completion=${usage2?.completionTokens}, cached=${cached2}`,
+    );
 
     // Analysis
     console.log('\n' + '='.repeat(80));
@@ -135,7 +139,7 @@ async function main() {
     if (cached2 > 0) {
       console.log(`✓ Second call cache hit: ${cached2} tokens read from cache`);
     } else {
-      console.log(`✗ Second call did NOT hit cache`);
+      console.log('✗ Second call did NOT hit cache');
     }
 
     const success = cached1 === 0 && cached2 > 0;

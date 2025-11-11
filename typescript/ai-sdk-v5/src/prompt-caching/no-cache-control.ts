@@ -59,7 +59,8 @@ async function main() {
       ],
     });
 
-    const cached1 = result1.providerMetadata?.openrouter?.usage?.promptTokensDetails?.cachedTokens ?? 0;
+    const cached1 =
+      result1.providerMetadata?.openrouter?.usage?.promptTokensDetails?.cachedTokens ?? 0;
     console.log(`  cached_tokens=${cached1}`);
 
     await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -86,7 +87,8 @@ async function main() {
       ],
     });
 
-    const cached2 = result2.providerMetadata?.openrouter?.usage?.promptTokensDetails?.cachedTokens ?? 0;
+    const cached2 =
+      result2.providerMetadata?.openrouter?.usage?.promptTokensDetails?.cachedTokens ?? 0;
     console.log(`  cached_tokens=${cached2}`);
 
     // Analysis
