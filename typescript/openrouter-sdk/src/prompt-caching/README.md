@@ -1,27 +1,28 @@
-# Anthropic Prompt Caching Examples (OpenRouter SDK)
+# Prompt Caching Examples (OpenRouter SDK)
 
-**TODO**: Add prompt caching examples using the @openrouter/sdk package.
+Examples demonstrating prompt caching with @openrouter/sdk.
 
-This directory will contain examples demonstrating Anthropic's prompt caching feature via the OpenRouter TypeScript SDK.
+## Documentation
 
-## Placeholder
+For full prompt caching documentation including all providers, pricing, and configuration details, see:
+- **[Prompt Caching Guide](../../../../docs/prompt-caching.md)**
 
-Examples will be added in a future commit.
+## Status
 
-## Expected Structure
+**TODO**: Examples coming soon. This directory will contain:
+- `user-message-cache.ts` - Cache large context in user messages
+- `multi-message-cache.ts` - Cache system prompt across multi-turn conversations
+- `no-cache-control.ts` - Control scenario (validates methodology)
 
+## Expected Usage
+
+```typescript
+import OpenRouter from '@openrouter/sdk';
+
+const openrouter = new OpenRouter({
+  apiKey: process.env.OPENROUTER_API_KEY,
+});
+
+// Configuration and cache_control usage pattern will be documented
+// when examples are implemented
 ```
-prompt-caching/
-├── README.md                        # This file
-├── system-message-cache.ts         # TODO: Cache on system message
-├── user-message-cache.ts           # TODO: Cache on user message
-├── multi-message-cache.ts          # TODO: Cache in conversation
-└── no-cache-control.ts             # TODO: Control scenario
-```
-
-## Pattern (To Be Implemented)
-
-The examples will use the official @openrouter/sdk package to demonstrate:
-- How to configure cache_control with the SDK
-- Where cache metrics appear in responses
-- Evidence-based verification of cache behavior
