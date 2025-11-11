@@ -191,3 +191,8 @@ See ecosystem-specific examples:
   - [user-message-cache.ts](../typescript/fetch/src/prompt-caching/user-message-cache.ts)
   - [multi-message-cache.ts](../typescript/fetch/src/prompt-caching/multi-message-cache.ts)
   - [no-cache-control.ts](../typescript/fetch/src/prompt-caching/no-cache-control.ts) (control)
+
+- **AI SDK v5** (Vercel): [typescript/ai-sdk-v5/src/prompt-caching/](../typescript/ai-sdk-v5/src/prompt-caching/)
+  - [user-message-cache.ts](../typescript/ai-sdk-v5/src/prompt-caching/user-message-cache.ts)
+  - [multi-message-cache.ts](../typescript/ai-sdk-v5/src/prompt-caching/multi-message-cache.ts)
+  - [no-cache-control.ts](../typescript/ai-sdk-v5/src/prompt-caching/no-cache-control.ts) (control)
