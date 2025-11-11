@@ -1,0 +1,17 @@
+{
+  "name": "@openrouter-examples/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "exports": {
+    "./constants": "./src/constants.ts",
+    "./types": "./src/types.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@openrouter-examples/fetch",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "examples": "bun run src/prompt-caching/user-message-cache.ts && bun run src/prompt-caching/multi-message-cache.ts && bun run src/prompt-caching/no-cache-control.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@openrouter-examples/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "openrouter-examples-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "examples": "bun --filter '*' examples",
+    "typecheck": "bun --filter '*' typecheck",
+    "stylecheck": "biome check .",
+    "format": "biome format --write ."
+  },
+  "workspaces": [
+    "shared",
+    "fetch"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@biomejs/biome": "^1.9.4",
+    "typescript": "^5.7.2"
+  }
+}
