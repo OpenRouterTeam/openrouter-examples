@@ -8,12 +8,22 @@
  * - FileParserPlugin automatically enabled for file attachments
  * - PDFs sent via data URI format
  * - Tests multiple PDF sizes with verification code extraction
+ * - Uses shared fixtures module with absolute paths
  *
  * To run: bun run typescript/ai-sdk-v5/src/plugin-file-parser/file-parser-all-sizes.ts
  */
 
 import { createOpenRouter } from '@openrouter/ai-sdk-provider';
 import { generateText } from 'ai';
+import {
+  type PdfSize,
+  PDF_SIZES,
+  readExpectedCode,
+  readPdfAsDataUrl,
+  getPdfSize,
+  formatSize,
+  extractCode,
+} from '@openrouter-examples/shared/fixtures';
 
 const openrouter = createOpenRouter({
   apiKey: process.env.OPENROUTER_API_KEY,
@@ -21,54 +31,15 @@ const openrouter = createOpenRouter({
 
 const MODEL = 'anthropic/claude-3.5-sonnet';
 
-const PDF_SIZES = ['small', 'medium', 'large', 'xlarge'] as const;
-
-// Expected verification codes from PDFs
-const EXPECTED_CODES: Record<string, string> = {
-  small: 'SMALL-7X9Q2',
-  medium: 'MEDIUM-K4P8R',
-  large: 'LARGE-M9N3T',
-  xlarge: 'XLARGE-F6H2V',
-};
-
-/**
- * Convert PDF file to base64 data URL
- */
-async function readPdfAsDataUrl(filePath: string): Promise<string> {
-  const file = Bun.file(filePath);
-  const buffer = await file.arrayBuffer();
-  const base64 = Buffer.from(buffer).toString('base64');
-  return `data:application/pdf;base64,${base64}`;
-}
-
-/**
- * Extract verification code from response text
- */
-function extractCode(text: string): string | null {
-  const match = text.match(/[A-Z]+-[A-Z0-9]{5}/);
-  return match ? match[0] : null;
-}
-
-/**
- * Format file size for display
- */
-function formatSize(bytes: number): string {
-  if (bytes < 1024 * 1024) {
-    return `${(bytes / 1024).toFixed(0)} KB`;
-  }
-  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
-}
-
 /**
  * Process a single PDF with FileParserPlugin
  */
-async function testPdf(size: (typeof PDF_SIZES)[number], expectedCode: string): Promise<boolean> {
-  const path = `./fixtures/pdfs/${size}.pdf`;
-  const file = Bun.file(path);
-  const dataUrl = await readPdfAsDataUrl(path);
+async function testPdf(size: PdfSize, expectedCode: string): Promise<boolean> {
+  const dataUrl = await readPdfAsDataUrl(size);
+  const fileSize = getPdfSize(size);
 
   console.log(`\n=== ${size.toUpperCase()} PDF ===`);
-  console.log(`Size: ${formatSize(file.size)}`);
+  console.log(`Size: ${formatSize(fileSize)}`);
   console.log(`Expected: ${expectedCode}`);
 
   const model = openrouter(MODEL, { usage: { include: true } });
@@ -123,14 +94,8 @@ async function main() {
   const results: boolean[] = [];
 
   for (const size of PDF_SIZES) {
-    const expectedCode = EXPECTED_CODES[size];
-    if (!expectedCode) {
-      console.error(`No expected code found for ${size}`);
-      results.push(false);
-      continue;
-    }
-
     try {
+      const expectedCode = await readExpectedCode(size);
       results.push(await testPdf(size, expectedCode));
     } catch (error) {
       console.log('Status: ❌ FAIL');

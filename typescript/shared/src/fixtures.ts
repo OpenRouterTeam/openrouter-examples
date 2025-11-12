@@ -5,7 +5,7 @@
  * using absolute paths so examples work regardless of where they're run from.
  */
 
-import { dirname, join } from 'node:path';
+import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 // Calculate absolute path to fixtures directory
