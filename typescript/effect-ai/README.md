@@ -20,7 +20,7 @@ bun examples
 
 ## Features
 
-- [prompt-caching.ts](./src/prompt-caching.ts) - Anthropic caching with Effect patterns
+- [prompt-caching](./src/prompt-caching/) - Anthropic caching examples with Effect patterns
 
 ### Key Configuration
 

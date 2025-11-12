@@ -12,8 +12,6 @@
  * CRITICAL CONFIGURATION:
  * - **MUST** include stream_options: { include_usage: true } in model config layer
  * - Without it, usage.cachedInputTokens will be undefined
- *
- * To run: bun run typescript/effect-ai/src/prompt-caching/user-message-cache.ts
  */
 
 import * as OpenRouterClient from '@effect/ai-openrouter/OpenRouterClient';

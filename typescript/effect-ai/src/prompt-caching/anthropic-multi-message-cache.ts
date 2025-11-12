@@ -5,8 +5,6 @@
  * via OpenRouter using Effect AI.
  *
  * Pattern: User message cache in multi-turn conversation using Effect patterns
- *
- * To run: bun run typescript/effect-ai/src/prompt-caching/multi-message-cache.ts
  */
 
 import * as OpenRouterClient from '@effect/ai-openrouter/OpenRouterClient';

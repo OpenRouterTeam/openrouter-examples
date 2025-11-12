@@ -9,16 +9,7 @@ For full prompt caching documentation including all providers, pricing, and conf
 
 ## Examples in This Directory
 
-- `user-message-cache.ts` - Cache large context in user messages
-- `multi-message-cache.ts` - Cache system prompt across multi-turn conversations
-- `no-cache-control.ts` - Control scenario (validates methodology)
-
-## Quick Start
-
-```bash
-# Run an example
-bun run typescript/effect-ai/src/prompt-caching/user-message-cache.ts
-```
+See the TypeScript files in this directory for specific examples.
 
 ## Effect AI Usage
 

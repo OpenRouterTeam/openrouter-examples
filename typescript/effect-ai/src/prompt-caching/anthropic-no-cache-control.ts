@@ -5,8 +5,6 @@
  * no caching occurs.
  *
  * Purpose: Validates that cache behavior is due to cache_control, not coincidence
- *
- * To run: bun run typescript/effect-ai/src/prompt-caching/no-cache-control.ts
  */
 
 import * as OpenRouterClient from '@effect/ai-openrouter/OpenRouterClient';
