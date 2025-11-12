@@ -6,8 +6,6 @@
  * - Non-streaming chat completions
  * - Streaming chat completions with async iteration
  * - Automatic usage tracking
- *
- * Run with: bun examples/basic/example-basic-openrouter-sdk.ts
  */
 
 import { OpenRouter } from '@openrouter/sdk';
