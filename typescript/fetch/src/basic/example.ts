@@ -3,34 +3,12 @@
  *
  * This example demonstrates how to make direct HTTP requests to OpenRouter's API
  * using the native fetch API without any additional libraries.
- *
- * To run: bun examples/basic/example-basic-fetch.ts
  */
 
-// Make this a module
-export {};
+import type { ChatCompletionResponse } from '@openrouter-examples/shared/types';
 
 // OpenRouter API endpoint
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
-
-// Type definitions for the API response
-interface ChatCompletionResponse {
-  id: string;
-  model: string;
-  choices: Array<{
-    index: number;
-    message: {
-      role: string;
-      content: string;
-    };
-    finish_reason: string;
-  }>;
-  usage: {
-    prompt_tokens: number;
-    completion_tokens: number;
-    total_tokens: number;
-  };
-}
 
 // Request payload following OpenAI-compatible chat completions format
 const requestBody = {
