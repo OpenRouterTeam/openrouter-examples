@@ -81,8 +81,11 @@ async function main() {
 
     console.log('  Response:', result1.text.substring(0, 100) + '...');
     const usage1 = result1.providerMetadata?.openrouter?.usage;
+    // FIXME: providerMetadata.openrouter.usage should have proper type with promptTokensDetails, promptTokens, completionTokens
+    // @ts-expect-error - usage is typed as JSONValue but should be OpenRouterUsage
     const cached1 = usage1?.promptTokensDetails?.cachedTokens ?? 0;
     console.log(
+      // @ts-expect-error - usage is typed as JSONValue but should be OpenRouterUsage
       `  Tokens: prompt=${usage1?.promptTokens}, completion=${usage1?.completionTokens}, cached=${cached1}`,
     );
 
@@ -117,8 +120,11 @@ async function main() {
 
     console.log('  Response:', result2.text.substring(0, 100) + '...');
     const usage2 = result2.providerMetadata?.openrouter?.usage;
+    // FIXME: providerMetadata.openrouter.usage should have proper type with promptTokensDetails, promptTokens, completionTokens
+    // @ts-expect-error - usage is typed as JSONValue but should be OpenRouterUsage
     const cached2 = usage2?.promptTokensDetails?.cachedTokens ?? 0;
     console.log(
+      // @ts-expect-error - usage is typed as JSONValue but should be OpenRouterUsage
       `  Tokens: prompt=${usage2?.promptTokens}, completion=${usage2?.completionTokens}, cached=${cached2}`,
     );
 

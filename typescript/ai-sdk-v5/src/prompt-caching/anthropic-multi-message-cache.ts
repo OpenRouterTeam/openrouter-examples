@@ -69,7 +69,9 @@ async function main() {
       ],
     });
 
+    // FIXME: providerMetadata.openrouter.usage should have proper type with promptTokensDetails
     const cached1 =
+      // @ts-expect-error - usage is typed as JSONValue but should be OpenRouterUsage
       result1.providerMetadata?.openrouter?.usage?.promptTokensDetails?.cachedTokens ?? 0;
     console.log(`  Response: ${result1.text.substring(0, 80)}...`);
     console.log(`  cached_tokens=${cached1}`);
@@ -110,7 +112,9 @@ async function main() {
       ],
     });
 
+    // FIXME: providerMetadata.openrouter.usage should have proper type with promptTokensDetails
     const cached2 =
+      // @ts-expect-error - usage is typed as JSONValue but should be OpenRouterUsage
       result2.providerMetadata?.openrouter?.usage?.promptTokensDetails?.cachedTokens ?? 0;
     console.log(`  Response: ${result2.text.substring(0, 80)}...`);
     console.log(`  cached_tokens=${cached2}`);
