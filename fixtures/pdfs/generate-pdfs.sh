@@ -62,7 +62,7 @@ magick -size 1600x1200 xc:white \
   -annotate +0-350 'LARGE PDF TEST' \
   -pointsize 40 \
   -annotate +0-250 'Verification Code:' \
-  -fill green -pointsize 46 \
+  -fill green -pointsize 96 \
   -annotate +0-170 "$LARGE_CODE" \
   -fill black -pointsize 24 \
   -annotate +0-80 'Large test document for PDF uploads.' \
