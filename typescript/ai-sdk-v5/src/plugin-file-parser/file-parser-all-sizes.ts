@@ -5,7 +5,7 @@
  * PDFs are sent as file attachments and automatically parsed server-side.
  *
  * Key Points:
- * - FileParserPlugin automatically enabled for file attachments
+ * - FileParserPlugin explicitly configured for models without native PDF support
  * - PDFs sent via data URI format
  * - Tests multiple PDF sizes with verification code extraction
  * - Uses shared fixtures module with absolute paths
@@ -29,7 +29,8 @@ const openrouter = createOpenRouter({
   apiKey: process.env.OPENROUTER_API_KEY,
 });
 
-const MODEL = 'anthropic/claude-3.5-sonnet';
+// Use a model that doesn't have native PDF support to demonstrate FileParserPlugin
+const MODEL = 'openai/gpt-4o-mini';
 
 /**
  * Process a single PDF with FileParserPlugin
@@ -42,7 +43,17 @@ async function testPdf(size: PdfSize, expectedCode: string): Promise<boolean> {
   console.log(`Size: ${formatSize(fileSize)}`);
   console.log(`Expected: ${expectedCode}`);
 
-  const model = openrouter(MODEL, { usage: { include: true } });
+  const model = openrouter(MODEL, {
+    plugins: [
+      {
+        id: 'file-parser',
+        pdf: {
+          engine: 'mistral-ocr',
+        },
+      },
+    ],
+    usage: { include: true },
+  });
 
   const result = await generateText({
     model,
