@@ -25,7 +25,7 @@ const EXPECTED_CODES: Record<string, string> = {
   small: 'SMALL-7X9Q2',
   medium: 'MEDIUM-K4P8R',
   large: 'LARGE-M9N3T',
-  xlarge: 'XLARGE-F6H2V',
+  xlarge: 'XLARGE-W6H5V',
 };
 
 /**
