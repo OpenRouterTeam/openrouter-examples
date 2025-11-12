@@ -72,7 +72,6 @@ const program = Effect.gen(function* () {
     Stream.runForEach((part) => {
       // Only print text deltas to show streaming effect
       if (part.type === 'text-delta') {
-        // TODO: print without newlines
         return Console.log(part.delta);
       }
       // Log other part types for demonstration
