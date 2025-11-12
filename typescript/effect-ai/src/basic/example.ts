@@ -72,7 +72,7 @@ const program = Effect.gen(function* () {
     Stream.runForEach((part) => {
       // Only print text deltas to show streaming effect
       if (part.type === 'text-delta') {
-        return Console.log(part.delta);
+        return Effect.sync(() => process.stdout.write(part.delta));
       }
       // Log other part types for demonstration
       return Console.log(`[${part.type}]`);
