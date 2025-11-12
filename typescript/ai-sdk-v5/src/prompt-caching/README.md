@@ -20,32 +20,4 @@ For full prompt caching documentation including all providers, pricing, and conf
 bun run typescript/ai-sdk-v5/src/prompt-caching/anthropic-user-message-cache.ts
 ```
 
-## AI SDK v5 Usage
-
-```typescript
-import { createOpenRouter } from '@openrouter/ai-sdk-provider';
-
-const openrouter = createOpenRouter({
-  extraBody: {
-    stream_options: { include_usage: true }, // Required for cache metrics
-  },
-});
-
-// Use providerOptions.openrouter.cacheControl on content items
-const result = await generateText({
-  model: openrouter('anthropic/claude-3-5-sonnet'),
-  messages: [{
-    role: 'user',
-    content: [{
-      type: 'text',
-      text: 'Large context...',
-      providerOptions: {
-        openrouter: { cacheControl: { type: 'ephemeral' } }
-      }
-    }]
-  }]
-});
-
-// Check cache metrics
-const cached = result.providerMetadata?.openrouter?.usage?.promptTokensDetails?.cachedTokens ?? 0;
-```
+See the example files for complete working code with current models and configuration.
