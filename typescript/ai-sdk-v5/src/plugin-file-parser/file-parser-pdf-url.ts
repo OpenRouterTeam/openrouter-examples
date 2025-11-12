@@ -67,8 +67,9 @@ async function main() {
     console.log(`- Completion tokens: ${result.usage.completionTokens}`);
     console.log(`- Total tokens: ${result.usage.totalTokens}`);
 
-    const cost = (result.providerMetadata?.openrouter?.usage as any)?.cost;
-    if (cost) {
+    const usage = result.providerMetadata?.openrouter?.usage;
+    if (usage && typeof usage === 'object' && 'cost' in usage) {
+      const cost = usage.cost as number;
       console.log(`\nCost: $${cost.toFixed(6)}`);
     }
 

@@ -13,17 +13,17 @@
  * To run: bun run typescript/ai-sdk-v5/src/plugin-file-parser/file-parser-all-sizes.ts
  */
 
-import { createOpenRouter } from '@openrouter/ai-sdk-provider';
-import { generateText } from 'ai';
 import {
-  type PdfSize,
   PDF_SIZES,
+  type PdfSize,
+  extractCode,
+  formatSize,
+  getPdfSize,
   readExpectedCode,
   readPdfAsDataUrl,
-  getPdfSize,
-  formatSize,
-  extractCode,
 } from '@openrouter-examples/shared/fixtures';
+import { createOpenRouter } from '@openrouter/ai-sdk-provider';
+import { generateText } from 'ai';
 
 const openrouter = createOpenRouter({
   apiKey: process.env.OPENROUTER_API_KEY,
