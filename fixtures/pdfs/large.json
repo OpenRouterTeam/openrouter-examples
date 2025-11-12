@@ -1,7 +1,8 @@
 {
-  "size": "large",
-  "description": "Large PDF test fixture (3.4 MB) for FileParserPlugin regression testing",
   "verificationCode": "LARGE-M9N3T",
-  "fileSizeBytes": 3567616,
-  "generatedDate": "2025-11-06"
+  "description": "Large test PDF (3.4MB) for FileParserPlugin regression testing",
+  "size": "large",
+  "type": "test_fixture",
+  "purpose": "Test large PDF handling and plugin activation",
+  "regression": "Validates fix for FileParserPlugin large PDF issue"
 }
