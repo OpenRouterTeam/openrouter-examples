@@ -50,7 +50,9 @@ function extractCode(text: string): string | null {
  * Format file size for display
  */
 function formatSize(bytes: number): string {
-  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} KB`;
+  if (bytes < 1024 * 1024) {
+    return `${(bytes / 1024).toFixed(0)} KB`;
+  }
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
 
@@ -149,7 +151,7 @@ async function main() {
         const result = await processPdf(size, expectedCode);
         results.push(result.success);
       } catch (error) {
-        console.log(`Status: ❌ FAIL`);
+        console.log('Status: ❌ FAIL');
         console.log(`Error: ${error instanceof Error ? error.message : String(error)}`);
         results.push(false);
       }
