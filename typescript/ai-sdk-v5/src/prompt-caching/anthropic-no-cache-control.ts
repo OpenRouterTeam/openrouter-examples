@@ -5,8 +5,6 @@
  * no caching occurs.
  *
  * Purpose: Validates that cache behavior is due to cache_control, not coincidence
- *
- * To run: bun run typescript/ai-sdk-v5/src/prompt-caching/no-cache-control.ts
  */
 
 import { LARGE_SYSTEM_PROMPT } from '@openrouter-examples/shared/constants';

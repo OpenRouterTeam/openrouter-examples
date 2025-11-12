@@ -7,8 +7,6 @@
  * Pattern: User message cache in multi-turn conversation
  * - Cache large context in first user message
  * - Cache persists through conversation history
- *
- * To run: bun run typescript/ai-sdk-v5/src/prompt-caching/multi-message-cache.ts
  */
 
 import { LARGE_SYSTEM_PROMPT } from '@openrouter-examples/shared/constants';

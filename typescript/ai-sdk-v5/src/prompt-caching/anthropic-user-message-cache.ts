@@ -11,8 +11,6 @@
  * CRITICAL CONFIGURATION:
  * - **MUST** include extraBody: { stream_options: { include_usage: true } }
  * - Without this, usage details (including cached_tokens) are not populated
- *
- * To run: bun run typescript/ai-sdk-v5/src/prompt-caching/anthropic-user-message-cache.ts
  */
 
 import { LARGE_SYSTEM_PROMPT } from '@openrouter-examples/shared/constants';
