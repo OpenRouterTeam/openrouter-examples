@@ -85,6 +85,8 @@ async function examplePDFFromURL() {
 
   console.log('✅ Request successful!');
   console.log('\nModel:', data.model);
+  // FIXME: ChatCompletionResponse type is missing 'provider' field which exists in actual response
+  // @ts-expect-error - provider field exists in response but not in type definition
   console.log('Provider:', data.provider);
   console.log('\nSummary:');
   console.log(data.choices[0].message.content);

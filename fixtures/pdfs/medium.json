@@ -1,0 +1,7 @@
+{
+  "verificationCode": "MEDIUM-K4P8R",
+  "description": "Medium test PDF (813KB) with text and image padding",
+  "size": "medium",
+  "type": "test_fixture",
+  "purpose": "Test PDF processing with moderate file size"
+}
