@@ -96,13 +96,19 @@ async function toolCalling() {
       b: z.number(),
     }),
     execute: async (params) => {
-      const operations: Record<string, number | string> = {
-        add: params.a + params.b,
-        subtract: params.a - params.b,
-        multiply: params.a * params.b,
-        divide: params.b !== 0 ? params.a / params.b : 'Cannot divide by zero',
-      };
-      return { result: operations[params.operation] };
+      switch (params.operation) {
+        case 'add':
+          return { result: params.a + params.b };
+        case 'subtract':
+          return { result: params.a - params.b };
+        case 'multiply':
+          return { result: params.a * params.b };
+        case 'divide':
+          if (params.b === 0) {
+            return { error: 'Cannot divide by zero' };
+          }
+          return { result: params.a / params.b };
+      }
     },
   });
 
@@ -157,7 +163,7 @@ async function usageAccounting() {
     console.log('- Prompt Tokens:', usage.promptTokens);
     console.log('- Completion Tokens:', usage.completionTokens);
     if (usage.cost) {
-      console.log('- Cost: $' + usage.cost.toFixed(6));
+      console.log(`- Cost: $${usage.cost.toFixed(6)}`);
     }
   }
 }
