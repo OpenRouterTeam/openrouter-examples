@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "examples": "bun run src/prompt-caching/user-message-cache.ts && bun run src/prompt-caching/multi-message-cache.ts && bun run src/prompt-caching/no-cache-control.ts",
+    "examples": "bun run src/prompt-caching/anthropic-user-message-cache.ts && bun run src/prompt-caching/anthropic-multi-message-cache.ts && bun run src/prompt-caching/anthropic-no-cache-control.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

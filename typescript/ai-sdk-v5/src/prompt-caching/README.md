@@ -9,15 +9,15 @@ For full prompt caching documentation including all providers, pricing, and conf
 
 ## Examples in This Directory
 
-- `user-message-cache.ts` - Cache large context in user messages
-- `multi-message-cache.ts` - Cache system prompt across multi-turn conversations
-- `no-cache-control.ts` - Control scenario (validates methodology)
+- `anthropic-user-message-cache.ts` - Cache large context in user messages
+- `anthropic-multi-message-cache.ts` - Cache system prompt across multi-turn conversations
+- `anthropic-no-cache-control.ts` - Control scenario (validates methodology)
 
 ## Quick Start
 
 ```bash
 # Run an example
-bun run typescript/ai-sdk-v5/src/prompt-caching/user-message-cache.ts
+bun run typescript/ai-sdk-v5/src/prompt-caching/anthropic-user-message-cache.ts
 ```
 
 ## AI SDK v5 Usage
@@ -33,7 +33,7 @@ const openrouter = createOpenRouter({
 
 // Use providerOptions.openrouter.cacheControl on content items
 const result = await generateText({
-  model: openrouter('anthropic/claude-3.5-sonnet'),
+  model: openrouter('anthropic/claude-3-5-sonnet'),
   messages: [{
     role: 'user',
     content: [{

@@ -20,7 +20,7 @@ bun examples
 
 ## Features
 
-- [prompt-caching.ts](./src/prompt-caching.ts) - Anthropic caching with AI SDK v5
+- [prompt-caching](./src/prompt-caching/) - Anthropic caching examples with AI SDK v5
 
 ### Key Configuration
 
