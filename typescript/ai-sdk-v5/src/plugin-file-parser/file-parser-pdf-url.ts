@@ -63,7 +63,10 @@ async function main() {
     console.log('\nSummary:');
     console.log(result.text);
     console.log('\nToken usage:');
+    // FIXME: result.usage should have proper type with promptTokens, completionTokens
+    // @ts-expect-error - usage is typed as LanguageModelV2Usage but should have token properties
     console.log(`- Prompt tokens: ${result.usage.promptTokens}`);
+    // @ts-expect-error - usage is typed as LanguageModelV2Usage but should have token properties
     console.log(`- Completion tokens: ${result.usage.completionTokens}`);
     console.log(`- Total tokens: ${result.usage.totalTokens}`);
 
