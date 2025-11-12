@@ -5,7 +5,7 @@ Examples demonstrating prompt caching with Vercel AI SDK v5.
 ## Documentation
 
 For full prompt caching documentation including all providers, pricing, and configuration details, see:
-- **[Prompt Caching Guide](../../../../docs/prompt-caching.md)**
+- **[OpenRouter Prompt Caching Guide](https://openrouter.ai/docs/features/prompt-caching)**
 
 ## Examples in This Directory
 
