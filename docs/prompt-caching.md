@@ -11,3 +11,4 @@ That guide covers provider-specific behavior, pricing, configuration requirement
 See ecosystem-specific examples in this repository for runnable reference implementations:
 
 - **TypeScript + fetch**: [typescript/fetch/src/prompt-caching/](../typescript/fetch/src/prompt-caching/)
+- **AI SDK v5** (Vercel): [typescript/ai-sdk-v5/src/prompt-caching/](../typescript/ai-sdk-v5/src/prompt-caching/)
