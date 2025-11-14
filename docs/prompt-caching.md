@@ -10,4 +10,4 @@ That guide covers provider-specific behavior, pricing, configuration requirement
 
 See ecosystem-specific examples in this repository for runnable reference implementations:
 
-- **TypeScript + fetch**: [typescript/fetch/src/prompt-caching/](../typescript/fetch/src/prompt-caching/)"}]}
+- **TypeScript + fetch**: [typescript/fetch/src/prompt-caching/](../typescript/fetch/src/prompt-caching/)
