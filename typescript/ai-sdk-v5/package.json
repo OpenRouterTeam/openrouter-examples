@@ -1,0 +1,18 @@
+{
+  "name": "@openrouter-examples/ai-sdk-v5",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "examples": "bun run run-examples.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@openrouter-examples/shared": "workspace:*",
+    "@openrouter/ai-sdk-provider": "1.2.2",
+    "ai": "^5.0.92"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

@@ -11,7 +11,8 @@
   },
   "workspaces": [
     "shared",
-    "fetch"
+    "fetch",
+    "ai-sdk-v5"
   ],
   "devDependencies": {
     "@types/bun": "1.3.2",
