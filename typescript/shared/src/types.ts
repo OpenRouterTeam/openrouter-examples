@@ -50,6 +50,17 @@ export interface Usage {
 }
 
 /**
+ * Reasoning detail object
+ */
+export interface ReasoningDetail {
+  type: 'reasoning.text' | 'reasoning.encrypted';
+  text?: string;
+  data?: string;
+  format: string;
+  index?: number;
+}
+
+/**
  * Chat completion response (OpenAI-compatible format)
  */
 export interface ChatCompletionResponse {
@@ -60,6 +71,8 @@ export interface ChatCompletionResponse {
     message: {
       role: string;
       content: string;
+      reasoning?: string;
+      reasoning_details?: ReasoningDetail[];
     };
     finish_reason: string;
   }>;
