@@ -1,0 +1,16 @@
+{
+  "name": "@openrouter-examples/fetch",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "examples": "bun run run-examples.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@openrouter-examples/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "1.3.2"
+  }
+}
