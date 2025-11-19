@@ -1,0 +1,7 @@
+{
+  "verificationCode": "XLARGE-W6H5V",
+  "description": "Extra-large test PDF (11MB) with extensive content",
+  "size": "xlarge",
+  "type": "test_fixture",
+  "purpose": "Test maximum file size handling with FileParserPlugin"
+}

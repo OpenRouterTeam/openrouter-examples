@@ -1,0 +1,7 @@
+{
+  "verificationCode": "SMALL-7X9Q2",
+  "description": "Small test PDF (33KB) with minimal content",
+  "size": "small",
+  "type": "test_fixture",
+  "purpose": "Test basic PDF processing with FileParserPlugin"
+}
