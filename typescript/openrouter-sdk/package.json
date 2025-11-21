@@ -1,0 +1,15 @@
+{
+  "name": "@openrouter-examples/openrouter-sdk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "examples": "echo 'TODO: OpenRouter SDK examples not yet implemented'"
+  },
+  "dependencies": {
+    "@openrouter-examples/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

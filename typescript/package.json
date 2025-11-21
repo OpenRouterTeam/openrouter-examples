@@ -13,7 +13,8 @@
     "shared",
     "fetch",
     "ai-sdk-v5",
-    "effect-ai"
+    "effect-ai",
+    "openrouter-sdk"
   ],
   "devDependencies": {
     "@types/bun": "1.3.2",
