@@ -9,7 +9,8 @@
   "exports": {
     "./constants": "./src/constants.ts",
     "./types": "./src/types.ts",
-    "./fixtures": "./src/fixtures.ts"
+    "./fixtures": "./src/fixtures.ts",
+    "./request-cache": "./src/request-cache.ts"
   },
   "devDependencies": {
     "@types/bun": "1.3.2",
