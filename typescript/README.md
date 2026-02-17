@@ -8,7 +8,7 @@ A Bun monorepo containing OpenRouter examples across different TypeScript ecosys
 - **fetch/** - Raw fetch API examples
 - **ai-sdk-v5/** - Vercel AI SDK v5 examples (using ai v4.x package)
 - **effect-ai/** - Effect-TS AI examples
-- **openrouter-sdk/** - OpenRouter TypeScript SDK examples (TODO)
+- **openrouter-sdk/** - OpenRouter TypeScript SDK examples
 
 ## Prerequisites
 
@@ -41,6 +41,7 @@ bun examples
 cd fetch && bun examples
 cd ai-sdk-v5 && bun examples
 cd effect-ai && bun examples
+cd openrouter-sdk && bun examples
 ```
 
 ## Workspace Benefits

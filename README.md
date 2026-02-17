@@ -26,7 +26,7 @@ make typescript    # Run TypeScript monorepo examples
 │   ├── fetch/         - Raw fetch API examples
 │   ├── ai-sdk-v5/     - Vercel AI SDK v5 examples
 │   ├── effect-ai/     - Effect-TS examples
-│   └── openrouter-sdk/ - OpenRouter SDK examples (TODO)
+│   └── openrouter-sdk/ - OpenRouter SDK examples
 ├── docs/              - Feature documentation
 └── Makefile           - Unified command interface
 ```
@@ -79,6 +79,7 @@ bash curl/prompt-caching.sh
 cd typescript/fetch && bun examples
 cd typescript/ai-sdk-v5 && bun examples
 cd typescript/effect-ai && bun examples
+cd typescript/openrouter-sdk && bun examples
 ```
 
 ## Benefits
