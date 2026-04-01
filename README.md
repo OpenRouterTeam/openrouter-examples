@@ -41,6 +41,10 @@ make typescript    # Run TypeScript monorepo examples
   - [typescript/ai-sdk-v5/src/prompt-caching/](typescript/ai-sdk-v5/src/prompt-caching/)
   - [typescript/effect-ai/src/prompt-caching/](typescript/effect-ai/src/prompt-caching/)
 
+### Portable System Prompts (HADS)
+- **Documentation**: [docs/hads-system-prompts.md](docs/hads-system-prompts.md)
+- Best practice for writing system prompts that work consistently across all 300+ models
+
 ## Prerequisites
 
 - Bun runtime: `curl -fsSL https://bun.sh/install | bash`
